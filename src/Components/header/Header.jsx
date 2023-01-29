@@ -3,9 +3,9 @@ import SearchBar from "./Searchbar";
 import {useState} from 'react';
 
 //Header Component
-function Header(){
+const Header = () => {
 
-
+    
     return(
         <div className="header">
             <div className="logo">
