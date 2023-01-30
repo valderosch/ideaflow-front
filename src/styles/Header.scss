@@ -1,16 +1,20 @@
+$mainColor: rgb(0, 153, 255);
+
 .header{
     font-size: 14px;
     background-color: #ffffff;
     h1{
+        float: left;
         color:#000000;
         font-size: 16px;
         font-weight: 700;
         b{
             color: #ffffff;
-            background-color: rgb(0, 153, 255);
+            background-color: $mainColor;
         }
     }
     .search{
+        float: left;
         width: 300px;
         height: 25px;
         border-radius: 0.3rem;

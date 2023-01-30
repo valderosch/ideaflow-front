@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/Header.scss"
 import SearchBar from "./Searchbar";
 import {useState} from 'react';
 import User from "./User";
