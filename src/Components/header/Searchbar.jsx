@@ -1,5 +1,6 @@
 import React from "react";
 import {useState} from 'react';
+import Data from "../../mock.json"
 
 // Searchbar Component
 const SearchBar = () => {
@@ -33,9 +34,6 @@ return(
     value={searchInput}/>
   
     <div className="searchResults">
-      <Result/><br/>
-      <Result/><br/>
-      <Result/><br/>
     </div>
 </div>);
 };

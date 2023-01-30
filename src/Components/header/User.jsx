@@ -8,8 +8,7 @@ const User = () => {
     return(
         <div className="userBlock">
             <p className="usename">
-                <p className="tag">@</p>
-                {username}
+                <b className="tag">@</b>{username}
                 <img src={imagepath} className="avatar" alt="ava"/>
             </p>
         </div>

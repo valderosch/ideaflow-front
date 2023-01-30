@@ -1,20 +1,32 @@
 $mainColor: rgb(0, 153, 255);
 
 .header{
+    width: 50rem;
+    height: 3rem;
+    margin: auto;
+    margin-top: 1rem;
     font-size: 14px;
     background-color: #ffffff;
     h1{
+        height: 2rem;
+        width: 5rem;
+        background-color: #b99b9b;
         float: left;
         color:#000000;
         font-size: 16px;
         font-weight: 700;
         b{
+            height: 2rem;
+            width: 3rem;
             color: #ffffff;
             background-color: $mainColor;
         }
     }
     .search{
-        float: left;
+        width: 20rem;
+        height: 2rem;
+        float:left;
+
         width: 300px;
         height: 25px;
         border-radius: 0.3rem;
@@ -22,5 +34,26 @@ $mainColor: rgb(0, 153, 255);
         color: #6a6a6a;
         font-size: 12;
         font-weight: 500;
+    }
+
+    .userBlock{
+        float: right;
+        width: 15rem;
+        height: 1rem;
+        background-color: #b99b9b;
+        .username{
+            color: #3c3c3c;
+            font-size: 14px;
+            p{
+                color: $mainColor;
+                font-size: 16px;
+            }
+        }
+        .avatar{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 1rem;
+            border: 4px solid $mainColor;
+        }            
     }
 }
