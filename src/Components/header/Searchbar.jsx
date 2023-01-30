@@ -11,14 +11,33 @@ const handleChange = (e) => {
   setSearchInput(e.target.value);
 };
 
-return <div>
+const Result = () => {
+  const title = "How many hours you spend on react?";
+  const author = "Goracio";
+  return(
+    <div className="result">
+      <a href="#">
+        <h3>"{title}"</h3>
+        <p>Author: {author}</p>
+      </a>
+    </div>
+  );
+}
 
-<input
-   type="search"
-   placeholder="Search here"
-   onChange={handleChange}
-   value={searchInput}/>
-</div>
+return( 
+<div>
+  <input
+    type="search"
+    placeholder="Search ideas"
+    onChange={handleChange}
+    value={searchInput}/>
+  
+    <div className="searchResults">
+      <Result/><br/>
+      <Result/><br/>
+      <Result/><br/>
+    </div>
+</div>);
 };
 
 export default SearchBar;
