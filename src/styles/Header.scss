@@ -7,11 +7,12 @@ $mainColor: rgb(0, 153, 255);
     margin-top: 1rem;
     font-size: 14px;
     background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
     h1{
         height: 2rem;
         width: 5rem;
         background-color: #b99b9b;
-        float: left;
         color:#000000;
         font-size: 16px;
         font-weight: 700;
@@ -25,8 +26,6 @@ $mainColor: rgb(0, 153, 255);
     .search{
         width: 20rem;
         height: 2rem;
-        float:left;
-
         width: 300px;
         height: 25px;
         border-radius: 0.3rem;
@@ -37,7 +36,6 @@ $mainColor: rgb(0, 153, 255);
     }
 
     .userBlock{
-        float: right;
         width: 15rem;
         height: 1rem;
         background-color: #b99b9b;
