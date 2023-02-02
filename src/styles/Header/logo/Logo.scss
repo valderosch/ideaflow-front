@@ -1,0 +1,24 @@
+$mainColor: #0099ff;
+$secondaryColor: #525252;
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 300px;
+    background-color: #ffffff;
+    color:#000000;
+    font-size: 16px;
+    font-weight: 500;
+    
+    b{
+        height: 2rem;
+        margin-right: 3px;
+        width: 3rem;
+        color: #ffffff;
+        letter-spacing: 2px;
+        font-weight: 700;
+        background-color: $mainColor;
+    }
+}

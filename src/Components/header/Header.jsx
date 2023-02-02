@@ -11,7 +11,7 @@ const Header = () => {
     return(
         <div className="header">
             <div className="logo">
-                <h1><b>IDEA</b>flow</h1>
+                <h1><b>IDEA</b>Flow</h1>
             </div>
             <SearchBar/>
             <User/>

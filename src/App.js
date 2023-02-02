@@ -15,7 +15,7 @@ function App() {
         {/* <Postlist/> */}
         <PostCreate/>
       <footer>
-        <Footer/>
+        {/* <Footer/> */}
       </footer>
     </div>
   );
