@@ -3,7 +3,7 @@ import "./styles/App.css"
 import Postlist from "./Components/body/Postlist";
 import Footer from "./Components/footer/Footer";
 import Header from "./Components/header/Header";
-import Router from "./Components/header/Router";
+import PostCreate from "./Components/body/PostCreate";
 
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
       <header>
         <Header/>
       </header>
-      <Postlist/>
+        {/* <Postlist/> */}
+        <PostCreate/>
       <footer>
         <Footer/>
       </footer>
