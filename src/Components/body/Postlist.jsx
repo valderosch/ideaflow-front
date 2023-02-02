@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/Post.scss"
+import "../../styles/Post.scss";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
@@ -10,7 +10,7 @@ const Postlist = () => {
     const [postList,  updatePostList] = useState([]);
 
     useEffect(() => {
-        console.log("Getting all posts from port:8080...");
+        console.log("Getting all posts for main page from port:8080...");
         axios
             .get(GETALL_URL)
             .then(response => {

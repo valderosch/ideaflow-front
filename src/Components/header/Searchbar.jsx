@@ -1,41 +1,29 @@
 import React from "react";
 import {useState} from 'react';
-import Data from "../../mock.json"
+import Data from "../../mock.json";
+import "../../styles/Header/searchbar/SearchBar.scss";
 
 // Searchbar Component
 const SearchBar = () => {
-
- const [searchInput, setSearchInput] = useState("");
- 
-const handleChange = (e) => {
-  e.preventDefault();
-  setSearchInput(e.target.value);
-};
-
-const Result = () => {
-  const title = "How many hours you spend on react?";
-  const author = "Goracio";
-  return(
-    <div className="result">
-      <a href="#">
-        <h3>"{title}"</h3>
-        <p>Author: {author}</p>
-      </a>
+  const [query, setQuery] = useState("")
+  return (
+    <div>
+        <input placeholder="Enter Post Title" onChange={event => setQuery(event.target.value)} />
+        {
+          Data.filter(post => {
+            if (query === '') {
+              return null;
+            } else if (post.title.toLowerCase().includes(query.toLowerCase())) {
+              return post;
+            }
+          }).map((post, index) => (
+            <div className="box" key={index}>
+              <p>{post.title}</p>
+              <p>{post.author}</p>
+            </div>
+          ))
+        }
     </div>
-  );
+  )
 }
-
-return( 
-<div>
-  <input
-    type="search"
-    placeholder="Search ideas"
-    onChange={handleChange}
-    value={searchInput}/>
-  
-    <div className="searchResults">
-    </div>
-</div>);
-};
-
 export default SearchBar;
