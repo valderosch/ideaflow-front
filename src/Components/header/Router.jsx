@@ -1,13 +1,15 @@
 import React from "react";
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 
 //Navigation component
 const Router = () => {
     return(
-        <div className="router">
-            <a href="#">Feed</a>
-            <a href="#">Profile</a>
-            <a href="#">Subs</a>
-        </div>
+        <nav>
+            <li><Link to={"/"}>Feed</Link></li>
+            <li><Link to={"/posts/new"}>New</Link></li>
+            {/* <li><Link to={"/profile"}>Profile</Link></li>
+            <li><Link to={"/profile/settings"}>Settings</Link></li> */}
+        </nav>
     );
 }
 
