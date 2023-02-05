@@ -20,7 +20,9 @@ function App() {
             <Route path="/" element={<Postlist/>}/>
 
             {/* Make it in ome page with /posts */}
-            <Route path="/posts/new" element={<PostCreate/>}/> 
+            <Route path="/posts/new" element={<PostCreate/>}/>
+            <Route path="/posts/:id" element={<Postlist/>}/>
+            <Route path="/posts/delete/:id" element={<Postlist/>}/>
           </Routes>
         <footer>
           {/* <Footer/> */}
