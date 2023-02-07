@@ -5,22 +5,17 @@ import axios from 'axios';
 import { BrowserRouter, Route, useParams } from "react-router-dom";
 
 const GETALL_URL = "http://localhost:8080/api/posts"; 
-const GETBYID_URL = "http://localhost:8080/api/posts/{id}";
+
 
 const deletePost = async(id) => {
     await axios
-    .delete(`http://localhost:8080/api/posts/${id}`)
-    .then(responce => {
-        updatePostList(responce.data);
-        console.log(responce.data);
-    })
+    .delete(`${GETALL_URL}/${id}`)
  };
 
 //Main components
 const Postlist = () => {
     const [postList,  updatePostList] = useState([]);
     const [posts, setPosts] = useState([]);
-
     const {id} = useParams()
 
     useEffect(() => {
@@ -58,6 +53,7 @@ const Postlist = () => {
                     <p>{data.decription}</p>
                     <span>{data.author}</span>
                     <button className="post_delete" onClick = {() => deletePost(this.data.id)}>{data.id} DELETE</button>
+                    <button className="post_delete" onClick = {() => deletePost(this.data.id)}>{data.id} EDIT</button>
                 </div>
             ))}
         </div>

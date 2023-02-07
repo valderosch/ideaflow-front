@@ -11,7 +11,7 @@ $secondaryColor: #525252;
     display: flex;
     justify-content: space-between;
 
-    @import './Header/logo/Logo.scss';
-    @import './Header/searchbar/SearchBar.scss';
-    @import './Header/user-block/User.scss';
+    @import './logo/Logo.scss';
+    @import './searchbar/SearchBar.scss';
+    @import './user-block/User.scss';
 }

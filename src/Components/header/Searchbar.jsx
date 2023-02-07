@@ -10,7 +10,7 @@ const SearchBar = () => {
   const [postList,  updatePostList] = useState([]);
 
   useEffect(() => {
-    console.log("Getting all posts for main page from port:8080...");
+    console.log("Getting all posts for searchbar from port:8080...");
     axios
         .get(GETALL_URL)
         .then(response => {
