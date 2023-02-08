@@ -3,16 +3,18 @@ $color2: #AFAFAF;
 $color3: #1c1c1c;
 $color5: #0099ff;
 $color6: #525252;
+$color7: #272727;
 
 .postlist{
     width: 50rem;
     height: fit-content;
-    background-color: $color6;
+    background-color: $color7;
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
   
     .post{
+        text-align: left;
         width: 100%;
         height: 10rem;
         margin-bottom: 1rem;
@@ -24,11 +26,11 @@ $color6: #525252;
         flex-direction: column;
         align-items: center;
         border-radius: 10px;
-        cursor: pointer;
     }
     
     h1{
         align-self: flex-start;
+        cursor: pointer;
     }
     .post_delete{
         align-self: flex-end;
@@ -57,14 +59,15 @@ $color6: #525252;
         height: 1rem;
         border: 2px solid $color6;
         border-radius: 3px;
+        transition: rotate 0.1s ease-out;
         &:hover{
             border-left: none;
             border-top: none;
             height: 1.2rem;
             width: 0.7rem;
             border-radius: 1px;
-            border-width: 3px;
-            border-color: #00ff3c;
+            border-width: 4px;
+            border-color: #04d334;
             rotate: 45deg;
             transition: rotate 0.1s ease-in;
         }

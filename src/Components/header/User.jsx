@@ -7,11 +7,12 @@ const User = () => {
     const imagepath = "./assets/avatar3.png";
 
     return(
-        <div className="userBlock">
-            <p className="usename">
-                <b className="tag">@</b>{username}
-                <img src={avatar} className="avatar" alt="ava"/>
-            </p>
+        <div className="user-block">
+            <div className="username-block">
+                <p className="hash">@</p>
+                <p className="name">{username}</p>
+            </div>
+            <img src={avatar} className="avatar" alt="ava"/>
         </div>
     );
 }

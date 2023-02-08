@@ -3,7 +3,6 @@ import "../../styles/Body/post/Post.scss";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import {  Link, useNavigate, useParams } from "react-router-dom";
-import PostOpen from "./PostOpen";
 
 const GETALL_URL = "http://localhost:8080/api/posts"; 
 
@@ -48,8 +47,8 @@ const Postlist = () => {
     return(
         <div className="postlist">
             {posts.map((data) => (
-                 <div className="post" key={data.id} onClick={() => openPost(data.id)}> 
-                    <h2 className="post__title">{data.title}</h2>
+                 <div className="post" key={data.id}> 
+                    <h2 className="post__title" onClick={() => openPost(data.id)}>{data.title}</h2>
                     <p>{data.decription}</p>
                     <span>{data.author}</span>
                     <button className="post_delete" onClick = {() => deletePost(data.id)}>x</button>
