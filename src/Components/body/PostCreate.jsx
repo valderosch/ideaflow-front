@@ -1,10 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 const CREATE_URL = "http://localhost:8080/api/posts";
 
 
 const PostCreate  = () => {
+    const nav = useNavigate();
     const titleElement = useRef(null);
     const descriptionElement = useRef(null);
     const authorElement = useRef(null);
@@ -25,8 +27,9 @@ const PostCreate  = () => {
             }).catch(e => {
                 console.log(e);
             })
-
+            nav("/");
     }
+
     return(
         <div className="card-body">
             <h2 className="card-title">Whats new?</h2>
