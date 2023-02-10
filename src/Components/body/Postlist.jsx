@@ -1,11 +1,21 @@
 import React from "react";
-import "../../styles/Body/post/Post.scss";
+import "../../styles/Body/PostList.scss";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import {  Link, useNavigate, useParams } from "react-router-dom";
+import InfiniteScroll from "react-infinite-scroll-component"
+import { useInfiniteQuery } from "react-query";
+import PostFilter from "./PostFilter.jsx";
 
 const GETALL_URL = "http://localhost:8080/api/posts"; 
 
+
+const fetchPosts = async ({ pageParam = 1 }) => {
+    const response = await fetch(
+    `http://localhost:8080/api/posts?page=${pageParam}&limit=10`);
+    const results = await response.json();
+    return { results, nextPage: pageParam + 1, totalPages: 100 };
+  };
 
 //Main components
 const Postlist = () => {
@@ -46,8 +56,11 @@ const Postlist = () => {
 
     return(
         <div className="postlist">
+            <PostFilter/>
             {posts.map((data) => (
+                //infinite scroll new 
                  <div className="post" key={data.id}> 
+                    <div className="image"></div>
                     <h2 className="post__title" onClick={() => openPost(data.id)}>{data.title}</h2>
                     <p>{data.decription}</p>
                     <span>{data.author}</span>
@@ -55,7 +68,7 @@ const Postlist = () => {
                     <Link className="post_edit" to={`/edit/${data.id}`}>EDIT</Link>
                     <div className="boxxx"></div>
                 </div>   
-                ))}
+            ))}
         </div>
     );
 }

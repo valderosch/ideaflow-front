@@ -1,0 +1,106 @@
+@import '../../Source/Source.scss'; 
+
+.upper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    width: 50rem;
+    height: 5rem;
+    background-color: $color6;
+
+    .post-filter{
+        width: 30rem;
+        height: 2.5rem;
+        background-color: $color2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+
+        .filter-root{
+            width: 8rem;
+            height: 2.5rem;
+            background-color: $color5;
+           
+            &::after{
+                content: "";
+                border-top:20px solid transparent;
+                border-left: 20px solid $color5;
+                border-bottom: 20px solid transparent;
+                position: absolute;
+            }   
+            .root-text{
+                width: 8rem;
+                height: 2.5rem;
+                align-self: center;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 500;
+                
+            }
+        }
+
+        .filter-subs{
+            width: 8rem;
+            height: 2.5rem;
+            background-color: $color5;
+            
+            &::before{
+                content: "";
+                border-top:20px solid transparent;
+                border-left: 20px solid $color1;
+                border-bottom: 20px solid transparent;
+                position: absolute;
+            } 
+            &::after{
+                content: "";
+                border-top:20px solid transparent;
+                border-left: 20px solid $color3;
+                border-bottom: 20px solid transparent;
+                position: absolute;
+            } 
+        }
+
+        .filter-prefs{
+            width: 8rem;
+            height: 2.5rem;
+            background-color: $color5;
+            &::before{
+                content: "";
+                border-top:20px solid transparent;
+                border-left: 20px solid $color1;
+                border-bottom: 20px solid transparent;
+                position: absolute;
+            } 
+            &::after{
+                content: "";
+                border-top:20px solid transparent;
+                border-left: 20px solid $color3;
+                border-bottom: 20px solid transparent;
+                position: absolute;
+            } 
+        }
+    }
+
+    .new-post{
+        width: 8rem;
+        height: 2.5rem;
+        color: $color1;
+        background-color: $color5;
+        border-radius: 5px;
+        border-color: $color5;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        .new-post-p::after{
+            content: "+";
+            padding-left: 0.3rem;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+    }
+}
+
