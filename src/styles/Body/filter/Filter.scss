@@ -84,6 +84,7 @@
     }
 
     .new-post{
+        display: flex;
         width: 8rem;
         height: 2.5rem;
         color: $color1;
@@ -93,6 +94,15 @@
         font-size: 18px;
         font-weight: 600;
         letter-spacing: 1px;
+        p{
+            align-self: center;
+            margin: auto;
+        }
+        p:hover{
+            align-self: center;
+            text-transform: uppercase;
+            text-align: center;
+        }
 
         .new-post-p::after{
             content: "+";
@@ -101,13 +111,15 @@
             font-size: 20px;
             font-weight: 400;
             rotate: -180deg;
-            transition: rotate 0.3s ease-in-out, font-size 0.2s ea;
+            text-transform: none;
+            transition: rotate 0.3s ease-in-out, font-size 0.2s ease-out, text-transform 0.2s ease-out;
             
         }
         .new-post-p:hover::after{
             display: inline-block;
             rotate: 180deg;
             font-size: 35px;
+            
             transition: rotate 0.5s ease-in-out, font-size 0.3s ease-in;
         }
 

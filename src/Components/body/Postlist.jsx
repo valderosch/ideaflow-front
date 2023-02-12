@@ -3,9 +3,8 @@ import "../../styles/Body/PostList.scss";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import {  Link, useNavigate, useParams } from "react-router-dom";
-import InfiniteScroll from "react-infinite-scroll-component"
-import { useInfiniteQuery } from "react-query";
 import PostFilter from "./PostFilter.jsx";
+import Ex from "./Ex";
 
 const GETALL_URL = "http://localhost:8080/api/posts"; 
 
@@ -69,6 +68,10 @@ const Postlist = () => {
                     <div className="boxxx"></div>
                 </div>   
             ))}
+            <div>
+                aAAAAAAAA
+                <Ex/>
+            </div>
         </div>
     );
 }

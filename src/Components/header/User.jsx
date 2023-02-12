@@ -6,9 +6,23 @@ const User = () => {
     const username = "nikonii";
     const imagepath = "./assets/avatar3.png";
 
+    const Card = () => {
+        return(
+            <div className="card-body">
+                <img scr={avatar} className="card-avatar" alt="avatar"/>
+                <p className="card-username"><b className="card-tag">@</b>{username}</p>
+                <nav className="card-nav">
+                    <li>settings</li>
+                    <li>subs</li>
+                    <li>quit</li>
+                </nav>
+            </div>
+        );
+    }
+
     return(
         <div className="user-block">
-            <div className="username-block">
+            <div className="username-block" onClick={() => Card}>
                 <p className="hash">@</p>
                 <p className="name">{username}</p>
             </div>

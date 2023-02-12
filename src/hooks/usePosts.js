@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Feed } from './Components/body/Feed.jsx'
+import Feed  from '../Components/body/Feed'
 
-const usePost = (pageNum = 1) => {
+const usePosts = (pageNum = 1) => {
     const [error, setError] = useState({});
     const [results, setResults] = useState([]);
     const [isError, setIsError] = useState(false);
@@ -18,7 +18,7 @@ const usePost = (pageNum = 1) => {
 
         Feed(pageNum, {signal})
             .then(data => {
-                setResults(pre => [...prev, ...data])
+                setResults(prev => [...prev, ...data])
                 setHasNextPage(Boolean(data.lenght))
                 setIsLoading(false);
             })
@@ -27,7 +27,7 @@ const usePost = (pageNum = 1) => {
                 if(signal.aborted) return 
                 setIsError(true);
                 setError({message: e.message})
-            })        
+            })       
     
         return () => controller.abort()
     }, [pageNum])
@@ -35,4 +35,4 @@ const usePost = (pageNum = 1) => {
     return { isLoading, isError, error, results, hasNextPage}
 }
 
-export default usePost;
+export default usePosts;

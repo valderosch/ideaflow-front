@@ -1,5 +1,6 @@
 import React from "react";
 import {useState, useEffect} from 'react';
+import {  Link, useNavigate, useParams } from "react-router-dom";
 import axios from 'axios';
 
 const GETALL_URL = "http://localhost:8080/api/posts";
@@ -8,6 +9,8 @@ const GETALL_URL = "http://localhost:8080/api/posts";
 const SearchBar = () => {
   const [query, setQuery] = useState("");
   const [postList,  updatePostList] = useState([]);
+  const nav = useNavigate();
+
 
   useEffect(() => {
     console.log("Getting all posts for searchbar from port:8080...");
@@ -21,7 +24,17 @@ const SearchBar = () => {
         .catch(e => {
             console.log(e);
         })
-}, [])
+  }, [])
+
+  const openPost = (id) => {
+    console.log("clicked post");
+    return(
+        <div className="post">
+            {nav(`/posts/${id}`)}
+        </div>
+    );
+}
+
   return (
     <div className="searchbar">
         <input className="input" placeholder="Search Topics" onChange={event => setQuery(event.target.value)} />
@@ -33,7 +46,7 @@ const SearchBar = () => {
               return post;
             }
           }).map((post, index) => (
-            <div className="box" key={index}>
+            <div className="box" key={index} onClick={() => openPost(post.id)}>
               <p className="title">{post.title}</p>
               <p className="author">{post.author}</p>
             </div>
