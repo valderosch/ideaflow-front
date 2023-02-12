@@ -16,11 +16,17 @@ const Header = () => {
         );
     }
 
-    return(
-        <div className="header">
+    const Logo = () => {
+        return(
             <div className="logo" onClick={returnHomePage}>
                 <h1 className="idea_h1"><b className="idea_b">IDEA</b>Flow</h1>
             </div>
+        );
+    }
+
+    return(
+        <div className="header">
+            <Logo/>
             <SearchBar/>
             <User/>
         </div>

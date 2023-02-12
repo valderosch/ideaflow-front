@@ -4,15 +4,15 @@ const PostFilter = () => {
     return(
         <div className="upper">
             <ul className="post-filter">
-                <li className="filter-root">
+                <li className="crump filter-root">
                     <p className="root-text">
                         #FLOW
                     </p>
                 </li>
-                <li className="filter-subs">
+                <li className=" crump filter-subs">
                     FEED
                 </li>
-                <li className="filter-prefs">
+                <li className="crump filter-prefs">
                     ALL
                 </li>
             </ul>
