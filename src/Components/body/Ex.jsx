@@ -1,5 +1,6 @@
-import { useState, useRef } from "react";
-import usePosts from "../../hooks/usePosts";
+import { useState, useRef, useCallback } from "react";
+import { useInfiniteQuery } from "react-query";
+import Feed  from './Feed'
 import Post from "./Post";
 
 const Ex = () => {
@@ -12,7 +13,20 @@ const Ex = () => {
         hasNextPage
     ] = usePosts(pageNum)
 
-    const lastPostRef = useRef();
+    const intObserver = useRef();
+    const lastPostRef = useCallback(post => {
+        if(isLoading) return
+
+        if(intObserver.current) intObserver.current.disconnect()
+        intObserver.current = new IntersectionObserver(posts => {
+            if(posts[0].isIntersecting && hasNextPage){
+                console.log('We are near the last element')
+                setPageNum(prev => prev + 1)
+            }
+        }) 
+
+        if(post) intObserver.current.observe(post)
+    }, [isLoading])
 
     if (isError) return( 
         <p className="error">Something get wrong<br/>
