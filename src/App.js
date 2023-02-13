@@ -8,6 +8,7 @@ import PostCreate from "./Components/body/PostCreate";
 import Router from "./Components/header/Router";
 import PostEdit from "./Components/body/PostEdit";
 import PostOpen from "./Components/body/PostOpen";
+import Ex from "./Components/body/Ex";
 
 
 
@@ -31,6 +32,7 @@ function App() {
           {/* <Footer/> */}
         </footer>
       </BrowserRouter>
+      <Ex/>
     </div>
   );
 }

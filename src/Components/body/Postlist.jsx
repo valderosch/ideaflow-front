@@ -68,10 +68,6 @@ const Postlist = () => {
                     <div className="boxxx"></div>
                 </div>   
             ))}
-            <div>
-                aAAAAAAAA
-                <Ex/>
-            </div>
         </div>
     );
 }
