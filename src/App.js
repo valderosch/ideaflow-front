@@ -8,7 +8,7 @@ import PostCreate from "./Components/body/PostCreate";
 import Router from "./Components/header/Router";
 import PostEdit from "./Components/body/PostEdit";
 import PostOpen from "./Components/body/PostOpen";
-import Ex from "./Components/body/Ex";
+import Feed from "./Components/body/Feed";
 
 
 
@@ -21,7 +21,7 @@ function App() {
           <Router/>
         </header>
           <Routes>
-            <Route path="/" element={<Postlist/>}/>
+            <Route path="/" element={<Feed/>}/>
             {/* Make it in ome page with /posts */}
             <Route path="/posts/new" element={<PostCreate/>}/>
             <Route exact path="/edit/:id" element={<PostEdit/>}/>
@@ -32,7 +32,6 @@ function App() {
           {/* <Footer/> */}
         </footer>
       </BrowserRouter>
-      <Ex/>
     </div>
   );
 }

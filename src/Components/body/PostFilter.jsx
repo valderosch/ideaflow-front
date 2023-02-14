@@ -9,7 +9,7 @@ const PostFilter = () => {
                         #FLOW
                     </p>
                 </li>
-                <li className=" crump filter-subs">
+                <li className="crump filter-subs">
                     FEED
                 </li>
                 <li className="crump filter-prefs">
