@@ -4,6 +4,7 @@ $color3: #ffffff;
 
 
 .user-block{
+    user-select: none;
     width: 300px;
     background-color: $color3;
     display: flex;
@@ -39,4 +40,41 @@ $color3: #ffffff;
         margin-left: 0.7rem;
         cursor: pointer;
     }           
+}
+
+.card-body{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    margin-top: 50px;
+    background-color: $color3;
+    border-radius: 10px;  
+    color: $secondaryColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    filter: drop-shadow(0px 2px 14px #1a1a1a);
+    .card-nav{
+        width: 190px;
+        height: 150px;
+        margin-bottom: 5px;
+        background-color: $mainColor;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        list-style-type: none;
+        
+    }
+}
+
+.card-body.active{
+    opacity: 1;
+    visibility: visible;
+}
+.card-body.inactive{
+    opacity: 0;
+    visibility: hidden;
 }

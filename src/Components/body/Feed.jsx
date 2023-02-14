@@ -1,17 +1,11 @@
 import { useState, useRef, useCallback } from "react";
 import { useInfiniteQuery } from "react-query";
 import Post from "./Post";
-import axios from 'axios'
 import { getPosts } from './Axios'
 import "../../styles/Body/post/Post.scss";
-import { useNavigate } from "react-router-dom";
 
-const GETALL_URL = "http://localhost:8080/api/posts"; 
-
+ 
 const Feed = () => {
-
-    const nav = useNavigate();
-
     const {
         fetchNextPage, //function 
         hasNextPage, // boolean
@@ -51,21 +45,6 @@ const Feed = () => {
             return <Post key={post.id} post={post} />
         })
     })
-
-    // Service consts
-    const openPost = (id) => {
-        console.log("clicked post");
-        return(
-            <div className="post">
-                {nav(`/posts/${id}`)}
-            </div>
-        );
-    }
-
-    const deletePost = async(id) => {
-        await axios
-        .delete(`${GETALL_URL}/delete/${id}`)
-    };
 
     return (
         <>
