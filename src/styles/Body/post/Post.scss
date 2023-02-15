@@ -1,4 +1,5 @@
 @import '../../Source/Source.scss';
+@import './DropDown.scss';
 
 .postlist{
     width: 50rem;
@@ -12,19 +13,19 @@
 }
 
 .post{
-    text-align: left;
     width: 100%;
     height: 25rem;
     width: 50rem;
     margin-bottom: 1rem;
     color:$color3;
-    background-color: $color2;
+    background-color: $color1;
     font-weight: 500;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    overflow: visible;
     .image{
         width: 97.5%;
         height: 25rem;
@@ -33,50 +34,37 @@
 
         background-color: #262626;
     }
+    .post-content{
+        width: 97.5%;
+        height: 20rem;
+        background-color: $color2;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 }
 
-h1{
+.post_title{
     align-self: flex-start;
     cursor: pointer;
 }
-.post_delete{
-    align-self: flex-end;
-    justify-self: flex-start;
-    width: 2rem;
-    height: 2rem;
-    background-color: $color5;
-    border: 1px solid $color5;
-    border-radius: 0.3rem;
+
+
+.dropdown{
+    height: 4rem;
+    background-color: $color3;
     color: $color1;
-    text-align: center;
-    margin-right: 0.5rem;
-    font-size: 20px;
-    font-weight: 500;
-    transition: color 2s ease-out;
-    transition: background-color 0.6s ease-out;
-    &:hover{
-        color: $color5;
-        background-color: $color3;
-        transition: color 2s ease-in;
-        transition: background-color 1s ease-in;
-    }
-}
-.boxxx{
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid $color6;
-    border-radius: 3px;
-    transition: rotate 0.1s ease-out;
-    &:hover{
-        border-left: none;
-        border-top: none;
-        height: 1.2rem;
-        width: 0.7rem;
-        border-radius: 1px;
-        border-width: 4px;
-        border-color: #04d334;
-        rotate: 45deg;
-        transition: rotate 0.1s ease-in;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .dot{
+        width: 1rem;
+        height: 1.5rem;
+        background-color: $color5;
     }
 }
 
