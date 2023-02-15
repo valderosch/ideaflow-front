@@ -8,9 +8,9 @@ import PostFilter from "./PostFilter";
  
 const Feed = () => {
     const {
-        fetchNextPage, //function 
-        hasNextPage, // boolean
-        isFetchingNextPage, // boolean
+        fetchNextPage, 
+        hasNextPage, 
+        isFetchingNextPage,
         data,
         status,
         error
