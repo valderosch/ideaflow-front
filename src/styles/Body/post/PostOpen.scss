@@ -1,0 +1,40 @@
+@import '../../Source/Source.scss';
+
+.post{
+    width: 70rem;
+    height: 35rem;
+    background-color: $color2;
+    .back-link{
+        text-decoration: none;
+        position: relative;
+        width:110px;
+        background: $color5;
+        height:40px;
+        line-height: 40px;
+        margin-bottom:30px; 
+        text-align:center;
+        color:#fff;
+        &::before{
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 20px solid $color5; 
+        }
+    }
+
+    .post-title{
+        font-size: 32px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        color: $color7;
+    }
+    .post-description{
+        font-size: 18px;
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: $color6;
+    }
+}

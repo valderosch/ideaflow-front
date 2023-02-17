@@ -1,4 +1,5 @@
 import React from "react";
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 
 const PostFilter = () => {
     return(
@@ -16,7 +17,7 @@ const PostFilter = () => {
                     ALL
                 </li>
             </ul>
-            <button className="new-post"><p className="new-post-p">New IDEA</p></button>
+            <Link to={"/posts/new"} className="new-post"><p className="new-post-p">New IDEA</p></Link>
         </div>
     );
 }
