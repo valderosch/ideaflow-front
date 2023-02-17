@@ -33,7 +33,7 @@ const SearchBar = () => {
             {nav(`/posts/${id}`)}
         </div>
     );
-}
+  }
 
   return (
     <div className="searchbar">

@@ -1,63 +1,71 @@
 $color1: #EAEAEA;
-$color2: #AFAFAF;
+$color2: #a4a4a4;
 $color3: #1c1c1c;
 $color5: #0099ff;
 $color6: #525252;
-$radius: 5px;
+$radius: 8px;
 
 .searchbar{ 
   align-self: center;
-  justify-content: center;
   z-index: 3;
   width: 500px;
-  height: 42px;
+  height: 32px;
   border-radius: $radius;
   background-color: $color1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   .input{
-    // delete styles for searchbar?
-    padding-left: 10px;
     width: 95%;
     height: 100%;
-    background-color:$color1;
-    color: $color2;
-    font-size: 14;
-    font-weight: 600;
-    & :active{
-      outline: none;
-      color: $color3;
-      font-weight: 700;
-      font-size: 14;
+    align-self: center;
+    background-color: inherit;
+    border: none;
+    border-color: $color2;
+    color: $color6;
+    font-size: 16;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    &:focus{
+      outline:none;
+      color: #000000;
     }
-    input:focus, input:active{
-      outline: none;
-  }
   }
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 500px;
-    height: 50px;
-    text-align: left;
-    border: black ridge 1px;
-    background-color: $color1;
-    color: $color3;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: $radius;
-    box-shadow: 1px 2px 2px #6f777b;
-    margin: 3px;
-    width: 20rem;
-    padding-left: 10px;
-    .title{
-      color: #000000;
-      font-size: 15px;
-      letter-spacing: 1px;
-    }
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  top:5.6rem;
+
+  background-color: $color1;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid $color2;
+  width: 31.1rem;
+  padding-left: 10px;
+  .title{
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .author{
+    color: $color6;
+    font-size: 13px;
+  }
+
+  &:hover{
+    background-color: $color6;
+    transition: background-color 0.2s ease-in;
     .author{
-      color: $color6;
-      font-size: 13px;
+      color: #EAEAEA;
     }
+    .title{
+      color: #fff;
+    }
+  }
 }
