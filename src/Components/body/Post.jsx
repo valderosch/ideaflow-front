@@ -25,6 +25,7 @@ const Post = React.forwardRef(({post}, ref) => {
     const deletePost = async(id) => {
         await axios
         .delete(`${GETALL_URL}/delete/${id}`)
+        nav("/#top");
     };
 
     const DropDown = () => { 

@@ -3,6 +3,7 @@ import { useInfiniteQuery } from "react-query";
 import Post from "./Post";
 import { getPosts } from './Axios'
 import "../../styles/Body/post/Post.scss";
+import "../../styles/Body/Feed.scss";
 import PostFilter from "./PostFilter";
 
  
@@ -52,7 +53,7 @@ const Feed = () => {
             <PostFilter/>
             {content}
             {isFetchingNextPage && <p className="loading-more">Loading IDEAS. . .</p>}
-            <p className="to-top"><a href="#top">to TOP ^</a></p>
+            <p className="to-top"><a href="#top">top</a></p>
         </>
     )
 }

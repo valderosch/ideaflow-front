@@ -7,7 +7,7 @@
     align-items: center;
     width: 50rem;
     height: 5rem;
-    background-color: $color6;
+    background-color: $color7;
 
     .post-filter{
         width: 30rem;
@@ -83,50 +83,40 @@
         }
     }
 
-    .new-post{
-        display: flex;
-        width: 9rem;
-        height: 2.5rem;
-        color: $color1;
-        background-color: $color5;
-        border-radius: 5px;
-        border-color: $color5;
+    .btn {
+        padding: 15px;
+        font-weight: 700;
         font-size: 18px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        p{
-            align-self: center;
-            margin: auto;
-            line-height: 0rem;
-        }
-        p:hover{
-            align-self: center;
-            text-transform: uppercase;
-            text-align: center;
+        text-decoration: none;
+        text-align: center;
+        transition: all .5s ease; 
+
+        .btn--doar {
+            color: #fff;
+            padding-right: 0;
+            background-color: $color5;
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+          
         }
 
-        .new-post-p::after{
+        .btn--doar:hover { 
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);  
+        }
+
+        .btn--doar:after {
             content: "+";
+            color: #f6f6f6;
             display: inline-block;
-            width: 1rem;
-            margin-left: 10px;
-            padding-left: 0.3rem;
-            font-size: 20px;
-            font-weight: 400;
-            rotate: -180deg;
-            text-transform: none;
-            transition: rotate 0.3s ease-in-out, font-size 0.2s ease-out, text-transform 0.2s ease-out;
-            
-        }
-        .new-post-p:hover::after{
-            display: inline-block;
-            rotate: 180deg;
-            font-size: 35px;
-            padding: 0;
-            margin: 0;
-            transition: rotate 0.5s ease-in-out, font-size 0.3s ease-in;
+            position: relative;
+            font-size: 22px;
+            right: -55px;
+            transition: all 0.3s ease;
         }
 
-    }
+        .btn--doar:hover:after {
+            margin: -5px 15px;
+            right: 0px;
+        }
+    }     
 }
 

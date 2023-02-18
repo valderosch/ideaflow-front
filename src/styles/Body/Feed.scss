@@ -1,1 +1,23 @@
 @import './post/Post.scss';
+
+
+.to-top{
+    position: relative;
+    left:30rem;
+    top: 30rem;
+    width: 7rem;
+    height: 2rem;
+    background-color: $color6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid $color2; 
+    a{
+        color: $color6;
+        text-decoration: none;
+        font-weight: 900;    
+        font-size: 20px;
+        text-shadow: -1px -1px 0 $color2, 1px -1px 0 $color2, -1px 1px 0 $color2, 1px 1px 0 $color2;    
+    }
+}

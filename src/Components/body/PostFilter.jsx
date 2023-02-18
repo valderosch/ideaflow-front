@@ -17,7 +17,9 @@ const PostFilter = () => {
                     ALL
                 </li>
             </ul>
-            <Link to={"/posts/new"} className="new-post"><p className="new-post-p">New IDEA</p></Link>
+            <Link to={"/posts/new"} className="btn">
+                <p className="btn btn--doar">New</p>
+            </Link>
         </div>
     );
 }
