@@ -6,7 +6,6 @@ const CREATE_URL = "http://localhost:8080/api/posts";
 
 
 const PostCreate  = () => {
-    const nav = useNavigate();
     const titleElement = useRef(null);
     const descriptionElement = useRef(null);
     const authorElement = useRef(null);
@@ -27,17 +26,16 @@ const PostCreate  = () => {
             }).catch(e => {
                 console.log(e);
             })
-            nav("/");
     }
 
     return(
-        <div className="card-body">
-            <h2 className="card-title">Whats new?</h2>
+        <div className="form-body">
+            <h2 className="form-text">Whats new?</h2>
             <form>
-                <input type="text" name="title" ref={titleElement} placeholder="Title"/>
-                <input type="texarea" name="description" ref={descriptionElement} placeholder="Description"/>
-                <input type="text" name="author" ref={authorElement} placeholder="author"/>
-                <button className="button" onClick={HandleClick}>Post</button>
+                <input type="text" name="form-title" ref={titleElement} placeholder="How its would be named?" required/>
+                <input type="texarea" name="form-description" ref={descriptionElement} placeholder="About your Idea"/>
+                <input type="text" name="form-author" ref={authorElement} placeholder="author"/>
+                <button className="form-button" onClick={HandleClick}>Post</button>
             </form>
         </div>
     );
